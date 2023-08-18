@@ -163,9 +163,7 @@ class WindowlessEglContext {
         bool _sharedContext = false;
         #endif
         #ifdef CORRADE_TARGET_WINDOWS
-        /* It's a HWND, which is HANDLE, which is PVOID, which is void*. FFS
-           Windows you're really mad with the typedefs. */
-        void* _window{};
+        HWND _window{};
         #endif
         EGLDisplay _display{};
         EGLContext _context{};
